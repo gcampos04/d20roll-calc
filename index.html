@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d20Roll-Calc</title>
+</head>
+<style>
+    .custom-width {
+        width: 300px;
+        /* Defina a largura desejada aqui */
+        margin-bottom: 19px;
+    }
+
+    #findNumbs,
+    #arrayEdit,
+    #result {
+        height: 19px;
+        margin: 5px 0px 5px 0px;
+    }
+</style>
+
+<body>
+    <input type="text" class="custom-width" id="inputString" placeholder="Digite algo">
+    <button onclick="sendString()">Enviar</button>
+
+    <div>Números informados:</div>
+    <div id="findNumbs"></div>
+    <div>Números editados:</div>
+    <div id="arrayEdit"></div>
+
+    <div>Resultado:</div>
+    <div id="result"></div>
+</body>
+<script src="script.js"></script>
+
+</html>
