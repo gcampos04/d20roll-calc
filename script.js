@@ -11,7 +11,7 @@ function transformInArray(editString) {
 }
 
 function processArray(arr) {
-     // Função auxiliar para remover um número específico do array
+    // Função auxiliar para remover um número específico do array
     function removeNumber(arr, num) {
         const index = arr.indexOf(num);
         if (index !== -1) {
@@ -26,9 +26,38 @@ function processArray(arr) {
             arr.splice(index1, 1); // Remove o número 1 encontrado
             if (arr.includes("10")) {
                 removeNumber(arr, "10");
-            } else if (arr.includes("9")) {
+            }
+            else if (arr.includes("9")) {
                 removeNumber(arr, "9");
-            } else {
+            }
+            else if (arr.includes("8")) {
+                removeNumber(arr, "8");
+            }
+            else if (arr.includes("7")) {
+                removeNumber(arr, "7");
+            }
+            else if (arr.includes("6")) {
+                removeNumber(arr, "6");
+            }
+            else if (arr.includes("5")) {
+                removeNumber(arr, "5");
+            }
+            else if (arr.includes("6")) {
+                removeNumber(arr, "6");
+            }
+            else if (arr.includes("5")) {
+                removeNumber(arr, "5");
+            }
+            else if (arr.includes("4")) {
+                removeNumber(arr, "4");
+            }
+            else if (arr.includes("3")) {
+                removeNumber(arr, "3");
+            }
+            else if (arr.includes("2")) {
+                removeNumber(arr, "2");
+            }
+            else {
                 arr.splice(index1, 0, "1"); // Reinsere o número 1 se não houver 10 ou 9
                 break;
             }
@@ -42,9 +71,32 @@ function processArray(arr) {
             arr.splice(index2, 1); // Remove o número 2 encontrado
             if (arr.includes("8")) {
                 removeNumber(arr, "8");
-            } else if (arr.includes("7")) {
+            }
+            else if (arr.includes("7")) {
                 removeNumber(arr, "7");
-            } else {
+            }
+            else if (arr.includes("6")) {
+                removeNumber(arr, "6");
+            }
+            else if (arr.includes("5")) {
+                removeNumber(arr, "5");
+            }
+            else if (arr.includes("6")) {
+                removeNumber(arr, "6");
+            }
+            else if (arr.includes("5")) {
+                removeNumber(arr, "5");
+            }
+            else if (arr.includes("4")) {
+                removeNumber(arr, "4");
+            }
+            else if (arr.includes("3")) {
+                removeNumber(arr, "3");
+            }
+            else if (arr.includes("1")) {
+                removeNumber(arr, "1");
+            }
+            else {
                 arr.splice(index2, 0, "2"); // Reinsere o número 2 se não houver 8 ou 7
                 break;
             }
@@ -63,7 +115,13 @@ function calcularMedia(array) {
 
     // Calcula a média
     let media = somaTotal / numeroDeItens;
-    return media.toFixed(1);
+
+    if (isNaN(media)) {
+        return 0
+    } else {
+        return media % 1 === 0 ? media.toFixed(0) : media.toFixed(1)
+        
+    }
 }
 
 
@@ -76,8 +134,8 @@ function sendString() {
     console.log(array)
     document.getElementById("findNumbs").innerHTML = array;
     let editArray = processArray(array)
-    console.log(editArray)
-    document.getElementById("arrayEdit").innerHTML = editArray;
+    console.log('editArray: ', editArray)
+    editArray.length === 0 ? document.getElementById("arrayEdit").innerHTML = 'Falha Crítica' : document.getElementById("arrayEdit").innerHTML = editArray;
     let media = calcularMedia(editArray)
     console.log(media)
 
