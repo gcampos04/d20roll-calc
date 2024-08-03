@@ -1,7 +1,7 @@
 console.log('iniciou')
 
 function cleanString(str) {
-    let cleanedStr = str.replace(/[{}\[\]+()]/g, '');
+    let cleanedStr = str.replace(/[{}\[\]+()]/g, ' ').replace(/\s+/g, ' ').trim();
     return cleanedStr
 }
 

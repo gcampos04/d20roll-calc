@@ -4,34 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>d20Roll-Calc</title>
+    <title>d10Roll-Calc</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    .custom-width {
-        width: 300px;
-        /* Defina a largura desejada aqui */
-        margin-bottom: 19px;
-    }
-
-    #findNumbs,
-    #arrayEdit,
-    #result {
-        height: 19px;
-        margin: 5px 0px 5px 0px;
-    }
-</style>
 
 <body>
-    <input type="text" class="custom-width" id="inputString" placeholder="Digite algo">
-    <button onclick="sendString()">Enviar</button>
+    <section class="container">
+        <div class="card">
 
-    <div>Números informados:</div>
-    <div id="findNumbs"></div>
-    <div>Números editados:</div>
-    <div id="arrayEdit"></div>
+            <h1 class="title">D10Roll Calc 🎲</h1>
 
-    <div>Resultado:</div>
-    <div id="result"></div>
+            <div class="area-input">
+                <input type="text" class="custom-width" id="inputString" placeholder="Digite o lance Ex. {(7+10)}">
+                <button onclick="sendString()">Enviar</button>
+            </div>
+
+            <div class="area-info">
+                <div class="label">Números informados:</div>
+                <div class="result" id="findNumbs"></div>
+                <div class="label">Números editados:</div>
+                <div class="result" id="arrayEdit"></div>
+
+                <div>Resultado:</div>
+                <div id="result"></div>
+            </div>
+        </div>
+    </section>
 </body>
 <script src="script.js"></script>
 
