@@ -1,7 +1,44 @@
+# Configuração para sitemap.xml
 /sitemap.xml
   Content-Type: text/xml
   Cache-Control: max-age=0
 
+# Configuração para robots.txt
 /robots.txt
   Content-Type: text/plain
   Cache-Control: max-age=0
+
+# Configuração geral para arquivos estáticos
+/*.html
+  Content-Type: text/html
+  Cache-Control: max-age=3600
+
+/*.css
+  Content-Type: text/css
+  Cache-Control: max-age=86400
+
+/*.js
+  Content-Type: application/javascript
+  Cache-Control: max-age=86400
+
+# Configuração para imagens
+/*.png
+  Content-Type: image/png
+  Cache-Control: max-age=604800
+
+/*.jpg
+  Content-Type: image/jpeg
+  Cache-Control: max-age=604800
+
+/*.svg
+  Content-Type: image/svg+xml
+  Cache-Control: max-age=604800
+
+# Configuração para fontes
+/*.woff2
+  Content-Type: font/woff2
+  Cache-Control: max-age=604800
+
+/*.woff
+  Content-Type: font/woff
+  Cache-Control: max-age=604800
